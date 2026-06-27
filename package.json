@@ -1,0 +1,16 @@
+{
+  "name": "password-strength-checker",
+  "version": "1.0.0",
+  "description": "Cyber security mini-project for checking password strength in the browser.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cyber-security",
+    "password",
+    "strength-checker"
+  ],
+  "author": "",
+  "license": "MIT"
+}

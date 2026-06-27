@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker | Cyber Security Project</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="checker-panel" aria-labelledby="app-title">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">Cyber Security Mini Project</p>
+          <h1 id="app-title">Password Strength Checker</h1>
+        </div>
+        <div class="privacy-badge" title="Your password is checked only in this browser.">
+          Local Only
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Enter password</label>
+        <div class="password-field">
+          <input id="password" type="password" autocomplete="new-password" spellcheck="false" placeholder="Type a password to test">
+          <button id="toggleVisibility" class="icon-button" type="button" aria-label="Show password" title="Show password">
+            <span id="visibilityIcon">Show</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="meter-wrap" aria-live="polite">
+        <div class="score-line">
+          <span id="strengthLabel">Waiting for password</span>
+          <strong id="scoreText">0 / 100</strong>
+        </div>
+        <div class="meter" aria-hidden="true">
+          <div id="meterFill" class="meter-fill"></div>
+        </div>
+      </div>
+
+      <div class="result-grid">
+        <article class="stat-card">
+          <span>Estimated crack time</span>
+          <strong id="crackTime">-</strong>
+        </article>
+        <article class="stat-card">
+          <span>Entropy estimate</span>
+          <strong id="entropy">0 bits</strong>
+        </article>
+        <article class="stat-card">
+          <span>Attack warning</span>
+          <strong id="warning">None</strong>
+        </article>
+      </div>
+
+      <section class="feedback-section" aria-labelledby="feedback-title">
+        <h2 id="feedback-title">Security checks</h2>
+        <ul id="checks" class="checks-list"></ul>
+      </section>
+
+      <section class="generator-section" aria-labelledby="generator-title">
+        <div class="section-heading">
+          <h2 id="generator-title">Secure generator</h2>
+          <button id="generateBtn" type="button">Generate</button>
+        </div>
+        <div class="generator-options">
+          <label for="lengthRange">Length: <strong id="lengthValue">16</strong></label>
+          <input id="lengthRange" type="range" min="10" max="32" value="16">
+        </div>
+        <div class="generated-row">
+          <input id="generatedPassword" type="text" readonly aria-label="Generated password">
+          <button id="copyBtn" type="button">Copy</button>
+        </div>
+      </section>
+    </section>
+
+    <aside class="info-panel" aria-labelledby="tips-title">
+      <h2 id="tips-title">Strong password rules</h2>
+      <p>
+        A safe password is long, unique, unpredictable, and not reused across accounts.
+        This checker runs completely in your browser and does not store or upload passwords.
+      </p>
+      <div class="tip-list">
+        <div>
+          <strong>Use length</strong>
+          <span>Prefer at least 12 to 16 characters.</span>
+        </div>
+        <div>
+          <strong>Mix character types</strong>
+          <span>Combine uppercase, lowercase, numbers, and symbols.</span>
+        </div>
+        <div>
+          <strong>Avoid patterns</strong>
+          <span>Skip names, dates, keyboard sequences, and common words.</span>
+        </div>
+        <div>
+          <strong>Use a manager</strong>
+          <span>Generate a unique password for every important account.</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
